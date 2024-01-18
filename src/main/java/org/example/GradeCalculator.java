@@ -23,4 +23,19 @@ public class GradeCalculator {
         double averageScore = totalScore / numberOfSubjects;
         System.out.println("The average score is: " + averageScore);
 
+        //Determining letter grade
+        char letterGrade = ' ';
+        if (averageScore >= 90) {
+            letterGrade = 'A';
+        } else if (averageScore >= 80) {
+            letterGrade = 'B';
+        } else if (averageScore >= 70) {
+            letterGrade = 'C';
+        } else if (averageScore >= 60) {
+            letterGrade = 'D';
+        } else {
+            letterGrade = 'F';
+        }
+        System.out.println("The letter grade is: " + letterGrade);
+
 }}
