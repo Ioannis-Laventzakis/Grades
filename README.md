@@ -2,46 +2,39 @@
 
 ## Overview
 
-The Java Grade Calculator is a program designed to calculate the average grade of a student based on scores in different subjects. The program has been expanded to include a `Student` class, allowing for the input of multiple students and their respective grades.
+The Java Grade Calculator is a program that calculates the average grade of students based on scores in different subjects. It has been updated to include multiple students.
 
 ## How to Use
 
 ### Step 1: Set Up Your Project
 
-1. Create a new Java project in your Integrated Development Environment (IDE) of choice.
+1. Create a new Java project in your favorite IDE or use a text editor like VSCode.
 2. Set up a new Java class named `GradeCalculator`.
 
-### Step 2: Create a Student Class
+### Step 2: Understanding the Program
 
-A new class `Student` has been introduced to represent individual students. It includes attributes such as student ID, name, and an array to store scores for each subject.
+- The program now includes a `Student` class to represent individual students.
+- Each student has a student ID, name, and an array to store scores for each subject.
 
-java
-public class Student {
-    // ... (code for the Student class as provided earlier)
-}
-Step 3: Use the GradeCalculator Class
-The GradeCalculator class has been modified to utilize the Student class. It now collects data for 5 students and calculates the average and letter grade for each student.
+### Step 3: Using the Program
 
-java
-Copy code
-import java.util.Scanner;
+- The `GradeCalculator` class collects data for up to 5 students and calculates the average and letter grade for each student.
 
-public class GradeCalculator {
-    // ... (code for the GradeCalculator class as provided earlier)
-}
-Step 4: Run the GradeCalculatorTest Class
-A new test class, GradeCalculatorTest, has been introduced to test the functionality of the program. It creates an instance of GradeCalculator, inputs data for 5 students, and displays the average grade and letter grade for each student.
+### Step 4: Testing
 
-java
-Copy code
-public class GradeCalculatorTest {
-    // ... (code for the GradeCalculatorTest class as provided earlier)
-}
-Feel free to run and test the GradeCalculatorTest class to verify the expanded functionality of the program.
+- A new test class, `GradeCalculatorTest`, has been introduced to test the expanded functionality.
 
-Additional Features
-The program now supports the following additional features:
+## Additional Features
 
-Student Class: The introduction of the Student class allows for the representation of individual students with their unique IDs, names, and scores.
-Multiple Students: The program can now handle input and calculation for up to 5 students, providing individual results for each student.
-Improved Input Handling: Input for student IDs now accepts non-numeric values to accommodate diverse student identifiers.
+- **Multiple Students**: The program can handle input and calculation for up to 5 students, providing individual results for each student.
+- **Improved Input Handling**: Input for student IDs now accepts non-numeric values for diverse student identifiers.
+
+## How to Expand
+
+Explore further possibilities to expand the program, such as:
+
+- Customizable Grade Scale
+- Weighted Grades
+- Class Average Calculation
+- GUI Implementation
+
