@@ -1,3 +1,4 @@
+import org.example.GradeCalculator;
 import org.example.Student;
 
 import java.util.Scanner;

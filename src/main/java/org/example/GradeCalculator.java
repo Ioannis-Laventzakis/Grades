@@ -13,6 +13,9 @@ public class GradeCalculator {
         System.out.println("Enter the number of subjects: ");
         int numberOfSubjects = scanner.nextInt();
 
+        //Create an array to store 5 Student objects
+        Student[] students = new Student[5];
+
         // Get scores for each subject
         int totalScore = 0;
         for (int i = 0; i < numberOfSubjects; i++) {

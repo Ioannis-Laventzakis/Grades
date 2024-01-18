@@ -1,7 +1,11 @@
 
+^
+java:S1854"<Remove this useless assignment to local variable "students".(ôÌ³ıÿÿÿÿ8«“ŠìÑ1
 \
-java:S1854"?Remove this useless assignment to local variable "letterGrade".(Ö–Æ×8ÅÎÆëÑ1
+java:S1854""?Remove this useless assignment to local variable "letterGrade".(Ö–Æ×8ÅÎÆëÑ1
 G	java:S106"+Replace this use of System.out by a logger.(ä…§é8ÉÎÆëÑ1
-G	java:S106"+Replace this use of System.out by a logger.(êÿÛÉ8ÉÎÆëÑ1
-L	java:S106"+Replace this use of System.out by a logger.(ëïİÔıÿÿÿÿ8ÊÎÆëÑ1
-G	java:S106+"+Replace this use of System.out by a logger.(åİª©8ËÎÆëÑ1
+O
+java:S1481"-Remove this unused "students" local variable.(ôÌ³ıÿÿÿÿ8®“ŠìÑ1
+G	java:S106"+Replace this use of System.out by a logger.(êÿÛÉ8ÉÎÆëÑ1
+L	java:S106"+Replace this use of System.out by a logger.(ëïİÔıÿÿÿÿ8ÊÎÆëÑ1
+G	java:S106."+Replace this use of System.out by a logger.(åİª©8ËÎÆëÑ1
