@@ -8,8 +8,7 @@ The Java Grade Calculator is a program that calculates the average grade of stud
 
 ### Step 1: Set Up Your Project
 
-1. Create a new Java project in your favorite IDE or use a text editor like VSCode.
-2. Set up a new Java class named `GradeCalculator`.
+1. Create a new Java project in your favorite IDE (e.g. Eclipse, IntelliJ, etc.).
 
 ### Step 2: Understanding the Program
 
