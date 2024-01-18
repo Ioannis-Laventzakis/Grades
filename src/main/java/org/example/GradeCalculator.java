@@ -19,4 +19,8 @@ public class GradeCalculator {
             totalScore += score;
 
         }
-}
+        //Calculate the average score
+        double averageScore = totalScore / numberOfSubjects;
+        System.out.println("The average score is: " + averageScore);
+
+}}
