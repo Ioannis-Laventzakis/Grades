@@ -39,4 +39,8 @@ public class Student {
         this.subjectScores = subjectScores;
     }
 
+    public void setSubjectScore(int subjectIndex, int score) {
+        this.subjectScores[subjectIndex] = score;
+
+    }
 }
