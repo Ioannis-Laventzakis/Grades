@@ -4,6 +4,8 @@ public class Student {
     private int studentId;
     private String studentName;
     private int[] subjectScores;
+    private int age;
+    private String sex;
     //Getter methods
     public int getStudentId() {
         return studentId;
