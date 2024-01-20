@@ -11,9 +11,10 @@ public class Course {
     private String courseInstructor;
     private List<Student> students;
 
-    public Course(int courseID, String courseName, String courseDescription, String courseInstructor) {
+    public Course(int courseID, String courseName, int numberOfStudents, String courseDescription, String courseInstructor) {
         this.courseID = courseID;
         this.courseName = courseName;
+        this.numberOfStudents = numberOfStudents;
         this.courseDescription = courseDescription;
         this.courseInstructor = courseInstructor;
         this.students = new ArrayList<>();
@@ -61,6 +62,10 @@ public class Course {
 
     public void removeStudent(Student student) {
         this.students.remove(student);
+    }
+
+    public void setNumberOfStudents(int numberOfStudents) {
+        this.numberOfStudents = numberOfStudents;
     }
 
     @Override

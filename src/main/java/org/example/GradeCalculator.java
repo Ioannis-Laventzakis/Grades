@@ -44,7 +44,7 @@ public class GradeCalculator {
         }
 
         for (int i = 0; i < numberOfSubjects; i++) {     // Loop through the array
-            Student student = students[i];
+            Student student = students[i]; // Get the Student object at index i
 
             double averageScore = calculateAverageGrade(student, numberOfSubjects); // Calculate average score
             System.out.println("\nStudent " + student.getStudentName() + "'s Average Grade: " + averageScore); // Print average score
@@ -76,5 +76,21 @@ public class GradeCalculator {
         }
 
         return (double) totalScore / numberOfSubjects;
+    }
+
+    public char calculateLetterGrade(Student student, int numberOfSubjects) {
+        double averageScore = calculateAverageGrade(student, numberOfSubjects);
+
+        if (averageScore >= 90) {
+            return 'A';
+        } else if (averageScore >= 80) {
+            return 'B';
+        } else if (averageScore >= 70) {
+            return 'C';
+        } else if (averageScore >= 60) {
+            return 'D';
+        } else {
+            return 'F';
+        }
     }
 }
