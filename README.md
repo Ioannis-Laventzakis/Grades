@@ -27,6 +27,10 @@ The Java Grade Calculator is a program that calculates the average grade of stud
 
 - **Multiple Students**: The program can handle input and calculation for up to 5 students, providing individual results for each student.
 - **Improved Input Handling**: Input for student IDs now accepts non-numeric values for diverse student identifiers.
+- **Improved Output**: The program now displays the student's name and ID along with the average and letter grade.
+- **Test Class**: A new test class, `GradeCalculatorTest`, has been introduced to test the expanded functionality.
+- **Student Class**: A new `Student` class has been introduced to represent individual students.
+- **Student Array**: The `GradeCalculator` class now uses an array of `Student` objects to store student data.
 
 ## How to Expand
 
