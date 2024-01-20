@@ -1,49 +1,56 @@
-import org.example.GradeCalculator;
-import org.example.Student;
-
-import java.util.Scanner;
+import org.example.GradeCalculator; // Import the GradeCalculator class
+import org.example.Student; // Import the Student class
+import org.junit.jupiter.api.Test; // Import the Test annotation
+import static org.junit.jupiter.api.Assertions.*; // Import static methods for assertions
 
 public class GradeCalculatorTest {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        // Create an instance of GradeCalculator
+    @Test
+    public void calculatesAverageGradeCorrectly() { // Test for average grade calculation
+        Student student = new Student(1, "John", 3);
+        student.setSubjectScore(0, 85);
+        student.setSubjectScore(1, 90);
+        student.setSubjectScore(2, 95);
+
         GradeCalculator gradeCalculator = new GradeCalculator();
+        double averageGrade = gradeCalculator.calculateAverageGrade(student, 3);
 
-        // Ask the user for the number of subjects
-        System.out.println("Enter the number of subjects: ");
-        int numberOfSubjects = scanner.nextInt();
+        assertEquals(90, averageGrade);
+    }
 
-        // Create an array to store 5 Student objects
-        Student[] students = new Student[5];
+    @Test
+    public void assignsCorrectLetterGrade() { // Test for letter grade assignment
+        Student student = new Student(1, "John", 3); // Create a new Student object
+        student.setSubjectScore(0, 85);
+        student.setSubjectScore(1, 90);
+        student.setSubjectScore(2, 95);
 
-        // Input data for each student
-        for (int i = 0; i < 5; i++) {
-            System.out.println("Enter data for Student " + (i + 1));
+        GradeCalculator gradeCalculator = new GradeCalculator();
+        char letterGrade = gradeCalculator.calculateLetterGrade(student, 3);
 
-            // Ask for student ID and name
-            System.out.print("Enter student ID: ");
-            int studentId = scanner.nextInt();
-            System.out.print("Enter student name: ");
-            String studentName = scanner.next();
+        assertEquals('A', letterGrade);
+    }
 
-            // Create a new Student object
-            students[i] = new Student(studentId, studentName, numberOfSubjects);
+    @Test
+    public void handlesZeroSubjects() { // Test for divide by zero error
+        Student student = new Student(1, "John", 0); // Create a new Student object
 
-            // Input scores for each subject for the current student
-            for (int j = 0; j < numberOfSubjects; j++) {
-                System.out.print("Enter the score for subject " + (j + 1) + ": ");
-                int score = scanner.nextInt();
-                students[i].setSubjectScore(j, score);
-            }
-        }
+        GradeCalculator gradeCalculator = new GradeCalculator();
+        double averageGrade = gradeCalculator.calculateAverageGrade(student, 0); // Calculate average score
 
-        // Calculate average and determine letter grade for each student using GradeCalculator
-        for (int i = 0; i < 5; i++) {
-            Student student = students[i];
+        assertEquals(0, averageGrade);
+    }
 
-            // Use GradeCalculator to calculate average and determine letter grade
-            gradeCalculator.calculateAndDisplayGrades(student, numberOfSubjects);
-        }
+    @Test
+    public void handlesNegativeScores() {
+        Student student = new Student(1, "John", 3);
+        student.setSubjectScore(0, -85);
+        student.setSubjectScore(1, -90);
+        student.setSubjectScore(2, -95);
+
+        GradeCalculator gradeCalculator = new GradeCalculator();
+        double averageGrade = gradeCalculator.calculateAverageGrade(student, 3); // Calculate average score
+
+        assertTrue(averageGrade < 0);
     }
 }

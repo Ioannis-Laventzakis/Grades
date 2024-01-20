@@ -1,3 +1,11 @@
 
-9
-java:S2187"Add some tests to this class.(§Ú¹u8ê äëÑ1
+;
+java:S5786	"Remove this 'public' modifier.(ıñü8í¸¿·Ò1
+;
+java:S5786"Remove this 'public' modifier.(“ºÇË8î¸¿·Ò1
+:
+java:S5786#"Remove this 'public' modifier.(ŠŸéu8î¸¿·Ò1
+;
+java:S5786-"Remove this 'public' modifier.(ŠÂâ8î¸¿·Ò1
+:
+java:S5786"Remove this 'public' modifier.(§Ú¹u8î¸¿·Ò1

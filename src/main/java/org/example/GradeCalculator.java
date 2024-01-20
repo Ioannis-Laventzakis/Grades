@@ -46,14 +46,7 @@ public class GradeCalculator {
         for (int i = 0; i < numberOfSubjects; i++) {     // Loop through the array
             Student student = students[i];
 
-            int totalScore = 0;
-            int[] subjectScores = student.getSubjectScores();
-
-            for (int score : subjectScores) {
-                totalScore += score;
-            }
-
-            double averageScore = (double) totalScore / numberOfSubjects; // Calculate average score
+            double averageScore = calculateAverageGrade(student, numberOfSubjects); // Calculate average score
             System.out.println("\nStudent " + student.getStudentName() + "'s Average Grade: " + averageScore); // Print average score
 
             // Calculate letter grade
@@ -72,5 +65,16 @@ public class GradeCalculator {
 
             System.out.println("Letter Grade: " + letterGrade); // Print letter grade
         }
+    }
+
+    public static double calculateAverageGrade(Student student, int numberOfSubjects) {
+        int totalScore = 0;
+        int[] subjectScores = student.getSubjectScores();
+
+        for (int score : subjectScores) {
+            totalScore += score;
+        }
+
+        return (double) totalScore / numberOfSubjects;
     }
 }
