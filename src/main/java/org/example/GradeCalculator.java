@@ -10,7 +10,17 @@ public class GradeCalculator {
 
         // Ask the user for the number of subjects
         System.out.println("Enter the number of subjects: ");
-        int numberOfSubjects = scanner.nextInt();
+        int numberOfSubjects = 0;
+        boolean validInput = false;
+        while (!validInput) {
+            try {
+                numberOfSubjects = scanner.nextInt();
+                validInput = true;
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a number.");
+                scanner.nextLine();
+            }
+        }
 
         // Create an array to store 5 Student objects
         Student[] students = new Student[5];
