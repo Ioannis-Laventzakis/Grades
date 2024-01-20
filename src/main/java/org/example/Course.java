@@ -1,10 +1,23 @@
 package org.example;
 
-public class Course {
+import java.util.ArrayList;
+import java.util.List;
 
-    int courseID;
-    String courseName;
-    int numberOfStudents;
+public class Course {
+    private int courseID;
+    private String courseName;
+    private int numberOfStudents;
+    private String courseDescription;
+    private String courseInstructor;
+    private List<Student> students;
+
+    public Course(int courseID, String courseName, String courseDescription, String courseInstructor) {
+        this.courseID = courseID;
+        this.courseName = courseName;
+        this.courseDescription = courseDescription;
+        this.courseInstructor = courseInstructor;
+        this.students = new ArrayList<>();
+    }
 
     public int getCourseID() {
         return courseID;
@@ -23,10 +36,41 @@ public class Course {
     }
 
     public int getNumberOfStudents() {
-        return numberOfStudents;
+        return students.size();
     }
 
-    public void setNumberOfStudents(int numberOfStudents) {
-        this.numberOfStudents = numberOfStudents;
+    public String getCourseDescription() {
+        return courseDescription;
+    }
+
+    public void setCourseDescription(String courseDescription) {
+        this.courseDescription = courseDescription;
+    }
+
+    public String getCourseInstructor() {
+        return courseInstructor;
+    }
+
+    public void setCourseInstructor(String courseInstructor) {
+        this.courseInstructor = courseInstructor;
+    }
+
+    public void addStudent(Student student) {
+        this.students.add(student);
+    }
+
+    public void removeStudent(Student student) {
+        this.students.remove(student);
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseID=" + courseID +
+                ", courseName='" + courseName + '\'' +
+                ", numberOfStudents=" + getNumberOfStudents() +
+                ", courseDescription='" + courseDescription + '\'' +
+                ", courseInstructor='" + courseInstructor + '\'' +
+                '}';
     }
 }
